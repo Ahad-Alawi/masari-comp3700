@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login / Register | Masari</title>
+  <!-- external css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="container">
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Masari logo" width="120" height="120"></a>
+      <span id="site-title">Masari | Oman Graduate Employment Guide</span>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="majors.html">Majors Explorer</a></li>
+        <li><a href="compare.html">Compare Majors</a></li>
+        <li><a href="trends.html">Employment Trends</a></li>
+        <li><a href="careers.html">Careers &amp; Skills</a></li>
+        <li><a href="register.html" class="current">Login / Register</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <h1>Login or Create an Account</h1>
+      <p class="intro">Create an account to save majors and to ask advisors questions. We collect only the information needed. Form results are sent to a test server for now.</p>
+      <p class="note"><strong>Prototype:</strong> these forms only send their data to a test website (httpbin.org). They do not create an account or log you in. Do not type a real password.</p>
+      <h2>Register</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Personal information</legend>
+          <label for="full_name">Full name</label>
+          <input type="text" id="full_name" name="full_name" required>
+          <label for="reg_email">Email</label>
+          <input type="email" id="reg_email" name="email" required>
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="9xxxxxxx">
+          <label for="reg_pass">Password (at least 8 characters)</label>
+          <input type="password" id="reg_pass" name="password" minlength="8" required>
+          <label for="birth">Date of birth</label>
+          <input type="date" id="birth" name="birth_date">
+        </fieldset>
+        <fieldset>
+          <legend>Study information</legend>
+          <p><strong>I am a:</strong></p>
+          <input type="radio" id="t1" name="user_type" value="prospective" checked><label class="inline" for="t1">School student</label>
+          <input type="radio" id="t2" name="user_type" value="current"><label class="inline" for="t2">University student</label>
+          <label for="interest">Major you are interested in</label>
+          <input type="text" id="interest" name="interest" list="majorlist" placeholder="Start typing">
+          <datalist id="majorlist"><option value="Computer Science"><option value="Statistics"><option value="Business Administration"><option value="Civil Engineering"><option value="Nursing"><option value="Education"></datalist>
+          <label for="college">Preferred college</label>
+          <select id="college" name="college"><option value="">Not sure yet</option><option value="science">Science</option><option value="engineering">Engineering</option><option value="commerce">Commerce and Economics</option><option value="education">Education</option></select>
+          <p><input type="checkbox" id="news" name="newsletter" value="yes"><label class="inline" for="news">Send me updates about new majors</label></p>
+          <input type="hidden" name="form_name" value="register">
+        </fieldset>
+        <input type="submit" value="Register"> <input type="reset" value="Reset">
+      </form>
+      <h2>Login</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <label for="log_email">Email</label>
+        <input type="email" id="log_email" name="email">
+        <label for="log_pass">Password</label>
+        <input type="password" id="log_pass" name="password">
+        <p><input type="checkbox" id="remember" name="remember" value="yes"><label class="inline" for="remember">Remember me</label></p>
+        <input type="hidden" name="form_name" value="login">
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </main>
+  <footer id="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Masari | COMP3700 Course Project, Sultan Qaboos University</p>
+      <p>Created by Ahad Nasser Al Alawi | <a href="mailto:ahadalalawi76@gmail.com">ahadalalawi76@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>

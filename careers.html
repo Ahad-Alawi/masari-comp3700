@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers &amp; Skills | Masari</title>
+  <!-- external css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="container">
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Masari logo" width="120" height="120"></a>
+      <span id="site-title">Masari | Oman Graduate Employment Guide</span>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="majors.html">Majors Explorer</a></li>
+        <li><a href="compare.html">Compare Majors</a></li>
+        <li><a href="trends.html">Employment Trends</a></li>
+        <li><a href="careers.html" class="current">Careers &amp; Skills</a></li>
+        <li><a href="register.html">Login / Register</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <h1>Careers and Skills</h1>
+      <p class="intro">See where a major can take you and which skills and short courses help. Then take the short quiz to get ideas.</p>
+      <p class="note"><strong>Prototype:</strong> the quiz sends its answers to a test website and does not give a recommendation yet.</p>
+      <div class="table-wrap">
+      <table class="data-table">
+        <caption>Fields, roles and skills (examples)</caption>
+        <thead><tr><th>Field</th><th>Example roles</th><th>Useful skills</th><th>Short courses</th></tr></thead>
+        <tbody>
+          <tr><th rowspan="2">Technology</th><td>Software developer</td><td>Programming, problem solving</td><td>Web development</td></tr>
+          <tr><td>Data analyst</td><td>Statistics, Excel, R or Python</td><td>Data analysis</td></tr>
+          <tr><th>Business</th><td>Accountant, marketing officer</td><td>Communication, Excel</td><td>Digital marketing</td></tr>
+          <tr><th>Health</th><td>Nurse, lab technician</td><td>Care, attention to detail</td><td>First aid</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h2>Skills employers ask for</h2>
+      <ul>
+        <li>Communication and teamwork</li>
+        <li>Problem solving</li>
+        <li>Computer and data skills</li>
+        <li>Time management</li>
+      </ul>
+      <h2>Interest quiz</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Tell us about yourself</legend>
+          <p><strong>Which activity do you enjoy most?</strong></p>
+          <input type="radio" id="q1a" name="activity" value="data" checked><label class="inline" for="q1a">Working with data</label>
+          <input type="radio" id="q1b" name="activity" value="people"><label class="inline" for="q1b">Helping people</label>
+          <input type="radio" id="q1c" name="activity" value="building"><label class="inline" for="q1c">Building things</label>
+          <input type="radio" id="q1d" name="activity" value="business"><label class="inline" for="q1d">Business and management</label>
+          <p><strong>Which skills are you good at?</strong></p>
+          <input type="checkbox" id="s1" name="skills" value="maths"><label class="inline" for="s1">Mathematics</label>
+          <input type="checkbox" id="s2" name="skills" value="communication"><label class="inline" for="s2">Communication</label>
+          <input type="checkbox" id="s3" name="skills" value="computers"><label class="inline" for="s3">Computers</label>
+          <label for="hours">How many hours a week can you study extra skills? (<em>0 to 20</em>)</label>
+          <input type="range" id="hours" name="hours" min="0" max="20" value="5">
+          <label for="level">Your study level</label>
+          <select id="level" name="level"><option value="school">School</option><option value="foundation">Foundation year</option><option value="university">University</option></select>
+        </fieldset>
+        <input type="submit" value="Show ideas"> <input type="reset" value="Reset">
+      </form>
+    </div>
+  </main>
+  <footer id="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Masari | COMP3700 Course Project, Sultan Qaboos University</p>
+      <p>Created by Ahad Nasser Al Alawi | <a href="mailto:ahadalalawi76@gmail.com">ahadalalawi76@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
