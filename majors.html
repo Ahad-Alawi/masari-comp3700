@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Majors Explorer | Masari</title>
+  <!-- external css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div class="container">
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Masari logo" width="120" height="120"></a>
+      <span id="site-title">Masari | Oman Graduate Employment Guide</span>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="majors.html" class="current">Majors Explorer</a></li>
+        <li><a href="compare.html">Compare Majors</a></li>
+        <li><a href="trends.html">Employment Trends</a></li>
+        <li><a href="careers.html">Careers &amp; Skills</a></li>
+        <li><a href="register.html">Login / Register</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <h1>Majors Explorer</h1>
+      <p class="intro">Browse the majors below. Use the search form to look for a major by keyword and field. The results are sent to a test server for now; later phases will show them on this page.</p>
+      <p class="note"><strong>Prototype:</strong> the search form sends its data to a test website and does not filter the list yet.</p>
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Search majors</legend>
+          <label for="keyword">Keyword</label>
+          <input type="search" id="keyword" name="keyword" placeholder="e.g. Statistics">
+          <label for="field">Field</label>
+          <select id="field" name="field">
+            <option value="">All fields</option><option value="technology">Technology</option><option value="science">Science</option>
+            <option value="business">Business</option><option value="engineering">Engineering</option><option value="health">Health</option><option value="education">Education</option>
+          </select>
+          <p style="margin-top: 12px;"><input type="submit" value="Search"> <input type="reset" value="Clear"></p>
+        </fieldset>
+      </form>
+      <h2>Available majors</h2>
+      <div class="cards">
+        <article class="card"><h3>Computer Science</h3><p><strong>Field:</strong> Technology</p><p>Software, algorithms, databases and computer systems.</p></article>
+        <article class="card"><h3>Statistics</h3><p><strong>Field:</strong> Science</p><p>Collecting, analysing and interpreting data.</p></article>
+        <article class="card"><h3>Business Administration</h3><p><strong>Field:</strong> Business</p><p>Management, finance, accounting and marketing.</p></article>
+        <article class="card"><h3>Civil Engineering</h3><p><strong>Field:</strong> Engineering</p><p>Designing and building roads, bridges and buildings.</p></article>
+        <article class="card"><h3>Nursing</h3><p><strong>Field:</strong> Health</p><p>Patient care, health education and clinical practice.</p></article>
+        <article class="card"><h3>Education</h3><p><strong>Field:</strong> Education</p><p>Teaching methods, curriculum and classroom management.</p></article>
+      </div>
+      <p class="note">The majors shown here are examples for the prototype. The final list will come from the university.</p>
+    </div>
+  </main>
+  <footer id="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Masari | COMP3700 Course Project, Sultan Qaboos University</p>
+      <p>Created by Ahad Nasser Al Alawi | <a href="mailto:ahadalalawi76@gmail.com">ahadalalawi76@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
