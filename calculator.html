@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill Learning Calculator | Masari</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" aria-label="Main navigation">
+      <div class="container-fluid px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center gap-2"><img src="images/logo.png" width="45"
+            height="45" alt="Masari compass logo"><span>Masari <small class="d-none d-xl-inline text-white-50 fs-6">|
+              Oman Graduate Employment Guide</small></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+          aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="majors.html">Majors</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="compare.html">Compare</a></li>
+            <li class="nav-item dropdown"><button class="btn btn-outline-light dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" type="button">More pages</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item " href="trends.html">Trends</a></li>
+                <li><a class="dropdown-item " href="careers.html">Careers & Skills</a></li>
+                <li><a class="dropdown-item " href="questionnaire.html">Feedback</a></li>
+                <li><a class="dropdown-item active" href="calculator.html">Calculator</a></li>
+                <li><a class="dropdown-item " href="funpage.html">Fun Game</a></li>
+                <li><a class="dropdown-item " href="register.html">Login / Register</a></li>
+                <li><a class="dropdown-item " href="account.html">My Account</a></li>
+                <li><a class="dropdown-item " href="about.html">About</a></li>
+                <li><a class="dropdown-item " href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-grow-1">
+    <div class="container py-4 py-md-5">
+      <div class="mb-4">
+        <h1 class="display-6 fw-bold">Skill Learning Calculator</h1>
+        <p class="lead text-secondary">Estimate how many weeks it may take you to finish a short learning plan.</p>
+      </div>
+      <div class="alert alert-warning" role="note">This is a planning estimate, not a guarantee of learning or
+        certification. You decide the study-hour target.</div>
+      <section class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <form id="calculatorForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6"><label for="calcSkill" class="form-label fw-semibold">Skill</label><select
+                  id="calcSkill" class="form-select">
+                  <option>Web Development</option>
+                  <option>Data Analysis</option>
+                  <option>Communication Skills</option>
+                  <option>Excel</option>
+                </select></div>
+              <div class="col-md-6">
+                <div class="mb-3"><label for="calcTarget" class="form-label fw-semibold">Target learning
+                    hours</label><input class="form-control" type="number" id="calcTarget" name="calcTarget"
+                    placeholder="" required min="1" max="1000" value="40">
+                  <div class="invalid-feedback">Please enter a valid target learning hours.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3"><label for="calcWeekly" class="form-label fw-semibold">Hours per week</label><input
+                    class="form-control" type="number" id="calcWeekly" name="calcWeekly" placeholder="" required min="1"
+                    max="80" value="5">
+                  <div class="invalid-feedback">Please enter a valid hours per week.</div>
+                </div>
+              </div>
+              <div class="col-md-6"><label class="form-label fw-semibold" for="calcLevel">Your experience</label><select
+                  id="calcLevel" class="form-select">
+                  <option value="beginner">Beginner</option>
+                  <option value="some">Some experience</option>
+                </select></div>
+            </div>
+            <div class="form-check mt-3 mb-3"><input type="checkbox" class="form-check-input" id="calcPractice"><label
+                class="form-check-label" for="calcPractice">I will spend 20% extra time practicing</label></div><button
+              class="btn btn-dark" type="submit">Calculate weeks</button>
+          </form>
+          <div class="mt-4" id="calculatorResult" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h2 class="h5">How the estimate works</h2>
+          <p class="mb-1">Adjusted hours = target hours × experience factor × practice factor.</p>
+          <p class="mb-0">Weeks = adjusted hours ÷ hours available per week, rounded up. The experience factor is 1 for
+            beginners and 0.8 for students with some experience. The practice factor is 1.2 if you select extra
+            practice.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Masari | COMP3700 Course Project, Sultan Qaboos University</p>
+      <p class="mb-0">Created by Ahad Nasser Al Alawi | <a class="link-warning"
+          href="mailto:ahadalalawi76@gmail.com">Email</a></p>
+    </div>
+  </footer>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+
+</html>
